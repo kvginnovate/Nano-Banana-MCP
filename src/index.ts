@@ -220,8 +220,7 @@ class NanoBananaMCP {
     
     try {
       const response = await this.genAI!.models.generateContent({
-        model: "gemini-2.5-flash-image-preview",
-        contents: prompt,
+        model: "gemini-2.5-flash-image",        contents: prompt,
       });
       
       // Process response to extract image data
@@ -353,8 +352,7 @@ class NanoBananaMCP {
       
       // Use new API format with multiple images and text
       const response = await this.genAI!.models.generateContent({
-        model: "gemini-2.5-flash-image-preview",
-        contents: [
+        model: "gemini-2.5-flash-image",        contents: [
           {
             parts: imageParts
           }
